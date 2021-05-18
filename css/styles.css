@@ -1,0 +1,142 @@
+body{
+		font-family: 'Barlow Semi Condensed', sans-serif;
+			background-color: hsl(210, 46%, 95%);
+			max-height:95vh;
+}
+
+/* Principal grid */
+.testimonial-grid{
+		margin: auto;
+		width: 90%;
+
+}
+.wrapper {
+	display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding: 10px;
+	align-items: stretch;
+}
+
+/* size of double column card */
+.double-col {
+	grid-column: span 2;
+}
+
+/* soze of double row card */
+.double-row {
+	grid-row: span 2;
+}
+
+/* all cards  */
+.card{
+	border-radius: 1rem;
+	margin: 0.5rem;
+	padding: 1.25rem;
+	line-height: 1.5;
+	z-index: -1;
+}
+
+/* Card Styles */
+/* HEADER */
+
+.profile-picture{
+	border-radius: 100%;
+	margin: 0.6rem;
+	align-items: center;
+	position: absolute;
+}
+.card-header{
+	align-items: center;
+	position: relative;
+}
+.quote-img{
+	position: absolute;
+	z-index: -1;
+	right: 7rem;
+	width: 150px;
+	opacity: 0.8;
+}
+.header-infos{
+	margin: auto;
+	padding: 0.6rem 5rem;
+}
+.card-header h2{
+	font-size: 1rem;
+	font-weight: 600;
+	margin: 0.3rem;
+}
+.card-header h3{
+	font-size: 0.8rem;
+	font-weight: 500;
+	margin: 0.3rem;
+}
+/* Quotes*/
+.big-quote{
+	font-size: 1.5rem;
+	margin: 1.5rem;
+}
+.small-quote{
+	font-size: 1rem;
+	padding: 1rem 1rem 0 1rem;
+}
+
+/* Colors of cards */
+.violet{
+	background-color: hsl(263, 55%, 52%);
+	color: hsl(0, 0%, 81%);
+}
+
+.light-grey{
+	background-color: hsl(217, 19%, 35%);
+	color: hsl(0, 0%, 81%);
+}
+
+.dark-grey{
+	background-color: hsl(219, 29%, 14%);
+	color: hsl(0, 0%, 81%);
+}
+
+.white{
+	background-color: hsl(0, 0%, 100%);
+	filter: drop-shadow(0 10px 0.75rem hsl(0, 0%, 71%));
+}
+
+
+/* footer */
+.attribution {
+	font-size: 0.8rem;
+	text-align: center; }
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+
+@media (max-width: 1400px) {
+	.testimonial-grid{
+		width: 100%;
+	}
+}
+
+@media (max-width: 1200px) {
+	.wrapper {
+	  grid-template-columns: auto;
+	  grid-gap: 1px;
+	}
+
+	.double-col {
+		grid-column: span 1;
+	}
+
+	.double-row {
+		grid-row: span 1;
+		order: 1;
+	}
+	.card{
+		margin: 5px 20px;
+	}
+	.quote-img{
+		top: 4rem;
+	}
+}
